@@ -1,0 +1,20 @@
+{
+  "name": "Scoutlit-Material-Demo",
+  "version": "0.0.1",
+  "authors": [
+    "abartolo <abartolo2@gmail.com>"
+  ],
+  "description": "Practicing Angular Material",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.10.0"
+  }
+}
