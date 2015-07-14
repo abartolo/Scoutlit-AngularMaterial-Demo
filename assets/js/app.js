@@ -3,15 +3,15 @@
 "use strict";
     
 //MODULE
-var weatherApp = angular.module('weatherApp', ['ngRoute', 'ngResource']);
+var angularMaterialDemo = angular.module('angularMaterialDemo', ['ngRoute', 'ngResource']);
 
 
 //Routes
-weatherApp.config(function ($routeProvider) {
+angularMaterialDemo.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
 
-            templateUrl: 'pages/homepage.html',
+            templateUrl: 'html/homepage.html',
             controller: 'homepageController'
         });
         /*.when('/forecast/', {
