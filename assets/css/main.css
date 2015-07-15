@@ -1,0 +1,12 @@
+md-toolbar {
+    background-color: #ECF0F1;
+}
+.toolbarFontColor {
+    color: #FFFFFF !important;
+}
+.loginBtnBackgroundColor {
+    background-color: #A32C36 !important;
+}
+.registerBtnBackgroundColor {
+    background-color: #0F3F5B !important;
+}
