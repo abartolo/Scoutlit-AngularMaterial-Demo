@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="angularMaterialDemo">
 
 <head lang="en">
     <meta charset="UTF-8">
@@ -14,22 +14,37 @@
 
 </head>
 
-<body ng-app="angularMaterialDemo">
+<body>
+    <!--md-is-locked-open="$mdMedia('gt-sm')" -->
+    <md-toolbar class="md-toolbar-tools md-whiteframe-z2" ng-controller="homepageController">
+        <!-- Sandwhich icon button -->
+        <md-button class="md-icon-button" aria-label="SandwhichIcon" ng-click="openLeftSideNav()">
+            <md-icon id="menuSandwhich" md-svg-icon="assets/svg/menuSandwhichIcon.svg"></md-icon>
+        </md-button>
+        <!-- this isn't need i believe since we can add the class to the md toolbar <div class="md-toolbar-tools">-->
+        <img src="http://scoutlit.com/images/logo-small.png" border="0" class="">
+        <!-- fill up the space between left and right area -->
+        <span flex></span>
+        <md-button class="md-raised loginBtnBackgroundColor toolbarFontColor">
+            Login
+        </md-button>
+        <md-button class="md-raised registerBtnBackgroundColor toolbarFontColor">
+            Register
+        </md-button>
+        <!--</div>-->
+    </md-toolbar>
+
     <div layout="row">
-        <md-toolbar class="md-toolbar-tools md-whiteframe-z2">
-            <!-- this isn't need i believe since we can add the class to the md toolbar <div class="md-toolbar-tools">-->
-            <img src="http://scoutlit.com/images/logo-small.png" border="0" class="">
-            <!-- fill up the space between left and right area -->
-            <span flex></span>
-            <md-button class="md-raised loginBtnBackgroundColor toolbarFontColor">
-                Login
-            </md-button>
-            <md-button class="md-raised registerBtnBackgroundColor toolbarFontColor">
-                Register
-            </md-button>
-            <!--</div>-->
-        </md-toolbar>
+
+        <md-sidenav md-component-id="leftNavPanel" class="md-sidenav-left" md-is-open="true" md-is-locked-open="$mdMedia('gt-sm')">
+            Left Nav!
+        </md-sidenav>
+
+        <md-content>
+            Content
+        </md-content>
     </div>
+
     <!--
     <div ng-view>
 
@@ -44,6 +59,7 @@
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
 
 
 <!--

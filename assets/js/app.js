@@ -1,14 +1,15 @@
-"use strict";
-
 //MODULE
-var angularMaterialDemo = angular.module('angularMaterialDemo', ['ngMaterial', 'ngAnimate']);
+var angularMaterialDemo = angular.module('angularMaterialDemo', ['ngMaterial', 'ngAnimate', 'ngRoute']);
 
-/*
+
 //Routes
 angularMaterialDemo.config(function ($routeProvider) {
-    $routeProvider
-        .when('/', {
+    $routeProvider.
+    when('/', {
+        controller: 'homepageController'
+    }).
 
-
+    otherwise({
+        redirectTo: '/'
+    });
 });
-*/
